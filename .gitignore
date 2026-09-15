@@ -12,8 +12,14 @@ testidentity.db*
 notifications.db*
 notifications.test.db*
 
-# Test artifacts
+# Local stuff and test artifacts
 coverage/
+bak/
+fakedist/
+playwright-report/
+test-results/
+test-dist/
+benchmark/
 
 # Logs
 debuglogs/
@@ -37,15 +43,14 @@ Icon
 # Thumbnails
 ._*
 
-# Files that might appear in the root of a volume
+
+# OS generated foo
 .DocumentRevisions-V100
 .fseventsd
 .Spotlight-V100
 .TemporaryItems
 .Trashes
 .VolumeIcon.icns
-
-# Directories potentially created on remote AFP share
 .AppleDB
 .AppleDesktop
 Network Trash Folder
@@ -80,12 +85,5 @@ logo/
 # AI foo for developers who are too lazy to code themselves
 .aider*
 aider
+.codex
 
-# Test artifacts (generated files, should not be committed)
-playwright-report/
-test-results/
-test-dist/
-benchmark/
-
-# Local development environment stuff
-fakedist/
