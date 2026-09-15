@@ -9,15 +9,13 @@ offer predefined cryptographic schemes to ensure data integrity and authenticity
 Although light nodes are supported, nodes are encouraged to be operated as full
 nodes, replicating all cubes.
 
-This project also creates a decentralized and censorship-resistant social
-networking application using the Verity platform, which will be akin to Twitter,
-Threads or Reddit. The platform supports 1:1 and 1:n encrypted messaging,
-protecting user privacy by minimizing metadata leakage and allowing secure,
-private communication between users. By offering a high degree of privacy,
-security, and resistance to censorship, this project offers a compelling
-alternative to traditional, centralized social networks.
+As a demo application, this project also creates a decentralized and
+censorship-resistant microblogging app application using the Verity platform,
+akin to Twitter, Threads or Reddit.
 
-For more information, see the [technical documentation](doc/verity.md).
+Application developers should check out the [Client Application Guide](clientApplicationGuide.md)
+
+For more in-depth information, see the [technical documentation](doc/verity.md).
 
 ## Installing Dependencies ##
 ```

@@ -2,8 +2,7 @@
 
 Verity is a tiered system. The core layer provides the foundational decentralised networking and storage layer, leveraging unique data structures known as "Cubes". Each Cube encapsulates 1kB of payload data, serving as the fundamental unit of information exchange synchronised across participating nodes in the Verity network.
 
-The optional **Common Cube Interface (CCI)** layer provides an API streamlining the interaction between various applications and these Cubes. This standardisation fosters interoperability among different applications, facilitating a smoother and more coherent data transmission landscape in the Verity network. By adhering to a common set of rules for structuring the payload data within a cube, applications can more easily share and understand the data being transmitted.
-
+The **Common Cube Interface (CCI)** layer provides a high-level API standardising data modelling in Verity applications.
 
 It provides:
 - **Verity Fields**, a standardised Type-Length-Value format for the payload data within a cube, including a standard set of type numbers for commonly used fields.
@@ -64,11 +63,13 @@ Standardized fields are defined to establish a universal foundation for payloads
 
 ### Custom Fields
 Applications have two ways of suppplementing CCI with custom fields:
-1) Applications can define custom fields starting from `0x30` to `0x3F`.
+
+1) The preferred way is for applications to define custom fields starting from `0x30` to `0x3F`.
    These fields must be variable length.
-2) Applications can place the CCI_END marker field (0x00). Any content following
+2) If needed, applications can place the CCI_END marker field (0x00). Any content following
    within the Cube will be ignored by pure CCI parsers and can be used to store
    application data in any application-defined format.
+   This is not the preferred way, only use if necessary.
 
 ### CCI date fields
 A five byte unix timestamp preceeded by a single byte purpose code describing
